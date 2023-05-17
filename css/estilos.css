@@ -4,12 +4,11 @@ body {
 }
 
 h1 {
-    font-size: 300%;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 250%;
     font-weight: bolder;
     text-align: center;
-    text-decoration: underline;
-    margin-top: 50px;
-    margin-bottom: 70px;
 }
 
 h2 {
@@ -34,40 +33,76 @@ a {
     font-weight: bolder;
 }
 
+header {
+    background-color: rgb(29, 28, 28);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0px 30px 0px ;
+    margin-bottom: 50px;
+}
+
 aside {
     display: block;
     float: right;
-    margin-top: 50px;
-    margin-left: 200px;
-    margin-bottom: 50px;
-    padding-left: 20px;
-    margin-right: 25px;
-    padding-right: 25px;
+    margin: 50px 25px 50px 200px;
+    padding: 0px 25px 0px 20px;
     border: 5px solid;
 }
 
 nav {
     background-color: white;
-    margin-top: 30px;
-    margin-bottom: 80px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin: 30px 0px 80px 0px;
+    padding: 20px 0px 20px 0px;
     border: 2px solid;
 }
 
 footer {
-    background-color: rgb(116, 113, 113);
-}
-
-.info{
+    background-color: rgb(29, 28, 28);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
     margin-top: 100px;
 }
 
+.celda_redes {
+    background-color: rgb(37, 37, 37);
+    border: 1px solid;
+    padding: 10px 50px 10px 50px;
+}
+
+
+.celda_redes a img{
+    width: 60px;
+    height: 60px;
+}
+
+.title {
+    color: rgb(148, 8, 8);
+}
+
+.title_ing {
+    color: rgb(148, 8, 8);
+    padding-left: 50px;
+}
+
+.contacto {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contacto a {
+    color: white;
+    font-size: 150%;
+    text-decoration: none;
+}
+
 .img_alfajor {
-    margin:20px auto;
-	display: block;
-    width: 800px;
-    height: 600px;
+    width: 160px;
+    height: 160px;
 }
 
 .img_wsp {
@@ -81,15 +116,6 @@ footer {
     height: 60px;
 }
 
-.title {
-    color: rgb(148, 8, 8);
-}
-
-.title_ing {
-    color: rgb(148, 8, 8);
-    padding-left: 20px;
-}
-
 .links a{
     margin-left: 35px;
 }
@@ -99,12 +125,6 @@ footer {
 }
 
 .iframe_map {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.imgs_redes a img{
-    margin-right: 5px;
-    width: 30px;
-    height: 30px;
+    width: 350px;
+    height: 150px;
 }
