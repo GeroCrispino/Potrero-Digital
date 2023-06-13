@@ -1,35 +1,55 @@
+@font-face {
+    font-family: "arial_rounded";
+    src: url("../fuente/ARLRDBD.TTF")
+    format(truetype); 
+
+    font-family: "cooper";
+    src: url("../fuente/COOPBL.TTF")
+    format(truetype);
+}
+
 body {
     background-color: rgb(223, 214, 200);
     font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.esp {
+    margin-left: 10px;
 }
 
 h1 {
     color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 250%;
-    font-weight: bolder;
+    font-family: "cooper";
+    font-size: 2.5em;
     text-align: center;
 }
 
 h2 {
-    font-size: 200%;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(148, 8, 8);
+    margin: 30px 0px 10px 0px;
 }
 
 h3 {
-    font-size: 150%;
+    font-family: "arial_rounded";
+    font-size: 1.5em;
+    color: rgb(148, 8, 8);
 }
 
 p {
-    font-size: 130%;
+    font-size: 1.3em;
 }
 
 li {
-    font-size: 120%;
+    font-size: 1.2em;
     margin-bottom: 30px;
 }
 
 a {
-    font-size: 100%;
+    font-size: 1em;
     font-weight: bolder;
 }
 
@@ -39,23 +59,35 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 0px 30px 0px ;
-    margin-bottom: 50px;
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 30px 0px 30px 0px;
 }
 
-aside {
-    display: block;
-    float: right;
-    margin: 50px 25px 50px 200px;
-    padding: 0px 25px 0px 20px;
-    border: 5px solid;
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 nav {
-    background-color: white;
-    margin: 30px 0px 80px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(29, 28, 28);
+    box-sizing: border-box;
+    margin: 30px 10px 30px 10px;
     padding: 20px 0px 20px 0px;
     border: 2px solid;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15vw;
+    margin-right: 50px;
+    border: 5px solid;
 }
 
 footer {
@@ -64,67 +96,105 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    box-sizing: border-box;
+    width: 100vw;
     padding-bottom: 20px;
     margin-top: 100px;
 }
 
-.celda_redes {
-    background-color: rgb(37, 37, 37);
-    border: 1px solid;
-    padding: 10px 50px 10px 50px;
+.prep_w_ing{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
+.prep_w_ing section {
+    display: flex;
+    width: 70vw;
+}
+
+.celda_redes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(37, 37, 37);
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid;
+}
+
+.celda_redes a:hover {
+    transform: scale(1.1);
+}
 
 .celda_redes a img{
-    width: 60px;
-    height: 60px;
+    height: 7vh;
+    margin: 7px;
 }
 
-.title {
-    color: rgb(148, 8, 8);
+.img_alfajor {
+    width: 8vw;
+    height: 17vh;
+    border-radius: 5px;
 }
 
-.title_ing {
-    color: rgb(148, 8, 8);
-    padding-left: 50px;
+.img_wsp {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+
+.img_wsp a img {
+    height: 6vh;
 }
 
 .contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto h3 {
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .contacto a {
     color: white;
-    font-size: 150%;
+    font-size: 1.5em;
     text-decoration: none;
-}
-
-.img_alfajor {
-    width: 160px;
-    height: 160px;
-}
-
-.img_wsp {
-    position: fixed;
-    bottom: 20px;
-    right: 50px;
-}
-
-.img_wsp a img {
-    width: 60px;
-    height: 60px;
 }
 
 .links a{
     margin-left: 35px;
 }
 
+.links a:link {
+    color: white;
+}
+
+.links a:visited {
+    color: darkgoldenrod;
+}
+
+.links a:active {
+    color: indianred;
+}
+
+.links a:hover {
+    background-color: red;
+    font-size: 1.1em;
+}
+
 .iframe_video {
+    width: 30vw;
+    height: 30vh;
     margin-bottom: 10px;
 }
 
 .iframe_map {
-    width: 350px;
-    height: 150px;
+    width: 15vw;
+    height: 16vh;
+    margin-top: 30px;
 }
