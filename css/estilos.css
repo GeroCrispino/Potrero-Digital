@@ -15,19 +15,29 @@ body {
     margin: 0;
 }
 
-.esp {
-    margin-left: 10px;
+/* Degradado cuando la página se vea en el celular */
+@media (max-width: 767px) {
+    body {
+        background: linear-gradient(white, rgb(28, 110, 177))
+    }
+}
+
+/* Degradado lateral cuando la página se vea en una tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+    body {
+        background: linear-gradient(to right, rgb(28,110,177), white, rgb(28,110,177), white, rgb(28,110,177));
+    }
 }
 
 h1 {
     color: white;
     font-family: "cooper";
-    font-size: 2.5em;
+    font-size: 2.5rem;
     text-align: center;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2rem;
     font-family: 'Roboto', sans-serif;
     color: rgb(148, 8, 8);
     margin: 30px 0px 10px 0px;
@@ -35,22 +45,23 @@ h2 {
 
 h3 {
     font-family: "arial_rounded";
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: rgb(148, 8, 8);
 }
 
 p {
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
 li {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-bottom: 30px;
 }
 
 a {
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: bolder;
+    text-decoration: none;
 }
 
 header {
@@ -62,6 +73,17 @@ header {
     box-sizing: border-box;
     width: 100vw;
     padding: 30px 0px 30px 0px;
+}
+
+
+.espacio {
+    margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+    .espacio {
+        margin: 0px 5px 0px 5px;
+    }
 }
 
 section {
@@ -85,9 +107,20 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 15vw;
+    width: 10vw;
     margin-right: 50px;
     border: 5px solid;
+}
+
+@media (max-width: 767px){
+    aside {
+        border: none;
+        width: 50%;
+    }
+
+    aside h3 {
+        margin-left: -50px;
+    }
 }
 
 footer {
@@ -102,15 +135,22 @@ footer {
     margin-top: 100px;
 }
 
-.prep_w_ing{
+/* Contenido de los ingredientes y la preparacion */
+.preparacion_ingredientes{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.prep_w_ing section {
+.preparacion_ingredientes section {
     display: flex;
     width: 70vw;
+}
+
+@media (min-width: 767px) {
+    .preparacion_ingredientes aside {
+        padding: 0px 50px 0px 50px;
+    }
 }
 
 .celda_redes {
@@ -133,10 +173,30 @@ footer {
     margin: 7px;
 }
 
-.img_alfajor {
-    width: 8vw;
-    height: 17vh;
+.logo_ig img {
+    border-radius: 50%;
+}
+
+.img_bandera {
+    width: 10%;
     border-radius: 5px;
+}
+
+@media (max-width: 992px) {
+    .img_bandera {
+        width: 30vw;
+    }
+}
+
+.img_alfajor {
+    width: 100%;
+}
+
+/* Cuando la resolución sea mayor a la de un celular, desaparece la imagen del alfajor */
+@media (min-width: 767px) {
+    .img_alfajor {
+        display: none;
+    }
 }
 
 .img_wsp {
@@ -162,11 +222,12 @@ footer {
 
 .contacto a {
     color: white;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 
 .links a{
+    text-decoration: none;
     margin-left: 35px;
 }
 
@@ -179,22 +240,34 @@ footer {
 }
 
 .links a:active {
-    color: indianred;
+    color: rgb(2, 75, 71);
 }
 
 .links a:hover {
     background-color: red;
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 .iframe_video {
     width: 30vw;
-    height: 30vh;
+    height: 34vh;
     margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+    .iframe_video {
+        width: 100%;
+    }
 }
 
 .iframe_map {
     width: 15vw;
     height: 16vh;
     margin-top: 30px;
+}
+
+@media (max-width: 992px) {
+    .iframe_map {
+        width: 50%;
+    }
 }
