@@ -8,12 +8,14 @@
     format(truetype);
 }
 
+
 body {
     background-color: rgb(223, 214, 200);
     font-family: sans-serif;
     box-sizing: border-box;
     margin: 0;
 }
+
 
 /* Degradado cuando la página se vea en el celular */
 @media (max-width: 767px) {
@@ -23,11 +25,12 @@ body {
 }
 
 /* Degradado lateral cuando la página se vea en una tablet */
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 991px) {
     body {
         background: linear-gradient(to right, rgb(28,110,177), white, rgb(28,110,177), white, rgb(28,110,177));
     }
 }
+
 
 h1 {
     color: white;
@@ -64,102 +67,27 @@ a {
     text-decoration: none;
 }
 
+
 header {
     background-color: rgb(29, 28, 28);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    box-sizing: border-box;
     width: 100vw;
     padding: 30px 0px 30px 0px;
 }
 
-
-.espacio {
-    margin-left: 10px;
-}
-
-@media (max-width: 767px) {
-    .espacio {
-        margin: 0px 5px 0px 5px;
-    }
-}
-
-section {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: rgb(29, 28, 28);
-    box-sizing: border-box;
-    margin: 30px 10px 30px 10px;
-    padding: 20px 0px 20px 0px;
-    border: 2px solid;
-}
-
-aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 10vw;
-    margin-right: 50px;
-    border: 5px solid;
-}
-
-@media (max-width: 767px){
-    aside {
-        border: none;
-        width: 50%;
-    }
-
-    aside h3 {
-        margin-left: -50px;
-    }
-}
-
-footer {
-    background-color: rgb(29, 28, 28);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    box-sizing: border-box;
-    width: 100vw;
-    padding-bottom: 20px;
-    margin-top: 100px;
-}
-
-/* Contenido de los ingredientes y la preparacion */
-.preparacion_ingredientes{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.preparacion_ingredientes section {
-    display: flex;
-    width: 70vw;
-}
-
-@media (min-width: 767px) {
-    .preparacion_ingredientes aside {
-        padding: 0px 50px 0px 50px;
-    }
+.img_bandera {
+    width: 150px;
+    border-radius: 5px;
 }
 
 .celda_redes {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
     background-color: rgb(37, 37, 37);
-    box-sizing: border-box;
     padding: 10px;
     border: 1px solid;
 }
@@ -169,7 +97,7 @@ footer {
 }
 
 .celda_redes a img{
-    height: 7vh;
+    width: 60px;
     margin: 7px;
 }
 
@@ -177,54 +105,133 @@ footer {
     border-radius: 50%;
 }
 
-.img_bandera {
-    width: 10%;
-    border-radius: 5px;
+
+
+.espacio {
+    margin-left: 10px;
 }
 
-@media (max-width: 992px) {
-    .img_bandera {
-        width: 30vw;
+.espacio section h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(148, 8, 8);
+    margin: 20px 0px 10px 0px;
+}
+
+.espacio section a {
+    font-size: 1rem;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+    .espacio {
+        margin: 0px 15px 0px 15px;
     }
 }
 
-.img_alfajor {
-    width: 100%;
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-/* Cuando la resolución sea mayor a la de un celular, desaparece la imagen del alfajor */
-@media (min-width: 767px) {
-    .img_alfajor {
+.iframe_video {
+    width: 500px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 991px) {
+    .iframe_video {
         display: none;
     }
 }
 
-.img_wsp {
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
+.img_alfajores {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 
-.img_wsp a img {
-    height: 6vh;
+.img_alfajores img {
+    width: 40%;
 }
 
-.contacto {
+/* Cuando la resolución sea mayor a la de un celular, desaparece la imagen del alfajor */
+@media (min-width: 992px) {
+    .img_alfajores {
+        display: none;
+    }
+}
+
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(29, 28, 28);
+    box-sizing: border-box;
+    margin: 30px 10px 50px 0px;
+    padding: 20px 0px 20px 0px;
+    border: 2px solid;
+}
+
+
+/* Contenido de los ingredientes y la preparacion */
+.preparacion_ingredientes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.preparacion_ingredientes section {
+    width: 70%;
+}
+
+#title_prep {
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+aside {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 10%;
+    padding: 0px 130px 0px 130px;
+    margin-right: 90px;
+    border: 5px solid;
 }
 
-.contacto h3 {
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#title_ing {
+    font-weight: bolder;
+    padding: 20px 0px 20px 0px;
 }
 
-.contacto a {
-    color: white;
-    font-size: 1.5rem;
-    text-decoration: none;
+@media (max-width: 767px){
+    aside {
+        order: 1;
+        border: none;
+        width: 20%;
+    }
+
+    aside li {
+        margin-right: 140px;
+    }
+
+    #title_ing {
+        margin-right: 80px;
+    }
+
+    .preparacion_ingredientes section {
+        order: 2;
+    }
 }
+
+
 
 .links a{
     text-decoration: none;
@@ -248,26 +255,47 @@ footer {
     font-size: 1.1rem;
 }
 
-.iframe_video {
-    width: 30vw;
-    height: 34vh;
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5%;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.card {
     margin-bottom: 10px;
 }
 
-@media (max-width: 992px) {
-    .iframe_video {
-        width: 100%;
-    }
+.img_wsp {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+
+.img_wsp a img {
+    width: 60px;
+    border-radius: 40%;
+}
+
+
+
+footer {
+    background-color: rgb(29, 28, 28);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100vw;
+    padding-bottom: 20px;
+    margin-top: 100px;
 }
 
 .iframe_map {
-    width: 15vw;
-    height: 16vh;
+    width: 300px;
+    height: 140px;
     margin-top: 30px;
-}
-
-@media (max-width: 992px) {
-    .iframe_map {
-        width: 50%;
-    }
 }
